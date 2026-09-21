@@ -4,11 +4,11 @@ A machine learning project that predicts HIV drug resistance from viral protease
 
 ## Project Goal
 
-HIV replicates rapidly and error-prone, generating mutations that can make the virus resistant to antiretroviral drugs. Clinicians use genotypic resistance testing — sequencing a patient's virus and checking for known resistance mutations — to guide treatment decisions. This project builds a classifier that predicts resistance to a specific protease inhibitor (PI) drug, [NAME YOUR DRUG HERE, e.g. Nelfinavir (NFV)], based on the pattern of mutations present in the viral protease sequence.
+HIV replicates rapidly and error-prone, generating mutations that can make the virus resistant to antiretroviral drugs. Clinicians use genotypic resistance testing — sequencing a patient's virus and checking for known resistance mutations — to guide treatment decisions. This project builds a classifier that predicts resistance to a specific protease inhibitor (PI) drug, Nelfinavir (NFV), based on the pattern of mutations present in the viral protease sequence.
 
 ## Data
 
-- **Source**: [Stanford HIV Drug Resistance Database — Genotype-Phenotype Datasets](https://hivdb.stanford.edu/_wrapper/download/GenoPhenoDatasets/PI_DataSet.txt)
+- **Source**: [Stanford HIV Drug Resistance Database — Genotype-Phenotype Datasets](https://hivdb.stanford.edu/_wrapper/download/GenoPhenoDatasets/PI_DataSet.txt)s
 - **Dataset used**: PI (protease inhibitor) high-quality filtered dataset — phenotype results from isolates tested with the PhenoSense assay, with redundant/ambiguous sequences excluded
 - **Note**: Raw data is not included in this repository (see `.gitignore`). To reproduce, download the dataset from the link above and place it in `data/raw/`.
 
@@ -41,8 +41,18 @@ Download the PI genotype-phenotype dataset from the Stanford HIVdb link above an
 
 ## Status
 
-🚧 In progress — [update this as you go, e.g. "currently on feature engineering"]
+First baseline model
+
+## Results
+
+Drug: NFV
+** Chosen for having the most available phenotype data among the protease inhibitors in the dataset
+Model: Logistic Regression (baseline)
+Accuracy: 95.3% on held out test data (381 isolates)
+Key finding: The model produced 8 false negatives. Isolates that were actually drug-resistant but predicted as susceptible. In clinical context, this is the MOST concerning error type. This means it could lead to prescribing a drug that won't work. By comparison, 10 isolates were false positives (predicted resistant when actually susceptible).
+Next step: Try a Random Forest model to see if it improves on this baseline and compare feature importance between the two models.
 
 ## Author
 
-Colin Clapper
+Colin Clapper B.S. Bioinformatics (Computational Sciences)
+September 21, 2026
