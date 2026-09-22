@@ -4,7 +4,7 @@ A machine learning project that predicts HIV drug resistance from viral protease
 
 ## Project Goal
 
-HIV replicates rapidly and error-prone, generating mutations that can make the virus resistant to antiretroviral drugs. Clinicians use genotypic resistance testing — sequencing a patient's virus and checking for known resistance mutations — to guide treatment decisions. This project builds a classifier that predicts resistance to a specific protease inhibitor (PI) drug, Nelfinavir (NFV), based on the pattern of mutations present in the viral protease sequence.
+HIV replicates rapidly and error-prone, generating mutations that can make the virus resistant to antiretroviral drugs. Clinicians use genotypic resistance testing to sequence a patient's virus and check for known resistance mutations to guide treatment decisions. This project builds a classifier that predicts resistance to a specific protease inhibitor (PI) drug, Nelfinavir (NFV), based on the pattern of mutations present in the viral protease sequence.
 
 ## Data
 
